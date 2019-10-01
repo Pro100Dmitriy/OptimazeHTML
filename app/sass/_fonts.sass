@@ -1,0 +1,18 @@
+
+@mixin font( $font-family, $font-style, $font-weight, $font-name )   
+    @font-face
+        font-family: $font-family
+        font-style: $font-style
+        font-weight: $font-weight
+        src: url('../fonts/#{$font-family}/#{$font-name}-#{$font-weight}.eot')                        // IE9 Compat Modes 
+        src: local($font-family)
+        src: url('../fonts/#{$font-family}/#{$font-name}-#{$font-weight}.woff2') format('woff2')      // Super Modern Browsers
+        src: url('../fonts/#{$font-family}/#{$font-name}-#{$font-weight}.woff') format('woff')        // Modern Browsers
+        src: url('../fonts/#{$font-family}/#{$font-name}-#{$font-weight}.ttf') format('truetype')     // Safari, Android, iOS
+
+
+@include font('Oswald', 'normal', 300, 'oswald')
+@include font('Oswald', 'normal', 400, 'oswald')
+@include font('Oswald', 'normal', 500, 'oswald')
+@include font('Oswald', 'normal', 600, 'oswald')
+@include font('Oswald', 'normal', 700, 'oswald')

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Pro100Dmitriy/OptimazeHTML#readme",
   "devDependencies": {
+    "bootstrap": "^4.3.1",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.0",
