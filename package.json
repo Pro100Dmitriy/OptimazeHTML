@@ -1,0 +1,29 @@
+{
+  "name": "fantic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pro100Dmitriy/OptimazeHTML.git"
+  },
+  "author": "Dmitriy Shestak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pro100Dmitriy/OptimazeHTML/issues"
+  },
+  "homepage": "https://github.com/Pro100Dmitriy/OptimazeHTML#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglifyjs": "^0.6.2"
+  }
+}
