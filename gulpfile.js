@@ -1,7 +1,6 @@
 var gulp         = require('gulp'),
     browserSync  = require('browser-sync'),
     sass         = require('gulp-sass'),
-    rename       = require('gulp-rename'),
     cssnano      = require('gulp-cssnano'),
     autoprefixer = require('gulp-autoprefixer'),
     concat       = require('gulp-concat'),
@@ -31,6 +30,12 @@ gulp.task('scripts', function(){
 });
 
 
+gulp.task('reload', function(){
+    return gulp.src('app/**/*.html')
+        .pipe( browserSync.reload({ stream: true }) );
+});
+
+
 gulp.task('browser-sync', function(){
     browserSync({
 		server: {
@@ -42,6 +47,12 @@ gulp.task('browser-sync', function(){
 	})
 });
 
-gulp.task('img', function(){
-    return 
+
+gulp.task('watch', function(){
+    gulp.watch( 'app/sass/**/*.sass'. gulp.parallel('sass') );
+    gulp.watch( 'app/js/**/*.js'. gulp.parallel('scripts') );
+    gulp.watch( 'app/**/*.html'. gulp.parallel('reload') );
 });
+
+
+gulp.task('default', gulp.parallel('sass', 'scripts', 'browser-sync', 'watch') );
