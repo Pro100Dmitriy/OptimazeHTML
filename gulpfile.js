@@ -55,4 +55,4 @@ gulp.task('watch', function(){
 });
 
 
-gulp.task('default', gulp.parallel('sass', 'scripts', 'browser-sync', 'watch') );
+gulp.task('default', gulp.parallel('sass', 'browser-sync', 'watch') );
